@@ -40,3 +40,5 @@ bwa index data/ref/Montipora_assembly_1000.fa
 # Create input files for popoolation analysis
 samtools mpileup -B data/bam/BC__raw.bam data/bam/NC__raw.bam > data/popool/BCNC.mpileup
 java -ea -Xmx7g -jar ~/popoolation2_1201/mpileup2sync.jar --input data/popool/BCNC.mpileup --output data/popool/BCNC.sync --fastq-type sanger --min-qual 20 --threads 16
+
+perl ~/popoolation2_1201/snp-frequency-diff.pl --input data/popool/BCNC.sync --output-prefix BCNC --min-count 6 --min-coverage 50 --max-coverage 200
