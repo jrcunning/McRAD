@@ -1,0 +1,8 @@
+Using input	data/popool/BCNC.sync
+Using outputprefix	BCNC
+Using min-count	6
+Using min-coverage	50
+Using max-coverage	200
+Using region	
+Using test	0
+Using help	0
